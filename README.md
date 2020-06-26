@@ -8,12 +8,6 @@ Download the webdriver of Chrome and Python for your navigator in the official w
 to download the webdriver for another navigator use this [Selenium](https://pypi.org/project/selenium/).  
 If you want use another language enter [Selenium](https://www.selenium.dev/downloads/).
 
-Then move the driver to /usr/local/bin/ with
-
-```bash
-mv ~/Downloads/chromedriver /usr/local/bin/
-```
-
 ---
 
 ## Install Selenium
@@ -23,6 +17,21 @@ Install selenium from pip.
 ```bash
 pip3 install selenium
 ```
+
+---
+
+## Selectors
+
+Help to find elements for:
+
+- ID
+- Name of the attribute
+- Name of the class
+- Name of the tag
+- XPath
+- Css selector
+- Text of the link
+- Partial text of the link
 
 ---
 
