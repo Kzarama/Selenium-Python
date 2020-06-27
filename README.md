@@ -39,7 +39,7 @@ Help to find elements for:
 
 Have some methods for interact with the browser and its elements
 
-Properties
+### Properties
 
 | Property / attribute  | Description                                                     | Example                      |
 | --------------------- | --------------------------------------------------------------- | ---------------------------- |
@@ -54,7 +54,7 @@ Properties
 
 This class allows interact with elements of the website
 
-Property
+### Property
 
 | Property / attribute | Description                               | Example        |
 | -------------------- | ----------------------------------------- | -------------- |
@@ -62,7 +62,7 @@ Property
 | tag_name             | gets the name of the HTML tag of the item | login.tag_name |
 | text                 | gets the text of the item                 | login.text     |
 
-Methods
+### Methods
 
 | Method / Attribute                   | Description                                                | Example                                                                  |
 | ------------------------------------ | ---------------------------------------------------------- | ------------------------------------------------------------------------ |
@@ -75,6 +75,26 @@ Methods
 | send_keys()                          | simulates write in an element of press key in an item      | email_field.send_keys('github')                                          |
 | submit()                             | send a form o confirmation in a text area                  | search_field.submit()                                                    |
 | value_of_css_property(property_name) | gets the value of one property css of the item             | header.value_of_css_property('background-color')                         |
+
+---
+
+## Explicit and implicit delay
+
+Implicit: search for one or more elements in the DOM if not available for the quantity of time assign
+Explicit: uses specified waiting conditions and continues until they are met
+
+| Expected conditionals           | Description                                                                                                              | Example                                                                                                                                            |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| element_to_be_clickable         | waits for the item to be visible and enabled to click on it                                                              | WebDriverWait(self.driver, 10).until(expected_conditions.element_to_be_clickable((By.NAME, "accept_button")))                                      |
+| element_to_be_selected          | waits for the item to be selected                                                                                        | subscription = self.driver.find_element_by_name("terms").WebDriverWait(self.driver, 10).until(expected_conditions.element_to_be_selected((terms))) |
+| invisibility_of_element_located | waits for the item don't be visible o not be in the DOM                                                                  | WebDriverWait(self.driver,10).until(expected_conditions.invisibility_of_element_located((By.ID,“loading_banner”)))                                 |
+| presence_of_all_element_located | waits for almost one of the elements indicated match with the elements presented in the website                          | WebDriverWait(self.driver,10).until(expected_conditions.presence_of_all_elements_located((By.CLASS_NAME,“input-text”)))                            |
+| presence_of_element_located     | waits for the item be visible and be present in the DOM                                                                  | WebDriverWait(self.driver,10).until(expected_conditions.presence_of_element_located((By.ID,“search-bar”)))                                         |
+| text_to_be_present_in_element   | waits for the item with the indicated text to be present                                                                 | WebDriverWait(self.driver,10).until(expected_conditions.text_to_be_present_in_element((By.ID,“seleorder”),“high”))                                 |
+| title_contains                  | waits for the page contain exactly the title as the indicated                                                            | WebDriverWait(self.driver, 10).until(expected_conditions.title_contains(“Welcome”))                                                                |
+| title_is                        | waits for the page contains identic the title as the indicated                                                           | WebDriverWait(self.driver, 10).until(expected_conditions.title_is(“Welcome”))                                                                      |
+| visibility_of                   | waits for the indicated item is in the DOM, is visible, is height and width are greater than zero                        |
+| visibility_of_element_located   | waits for the item indicated by the selector to be in the DOM, be visible and its height and width are greater than zero | WebDriverWait(self.driver,10).until(expected_conditions.visibility_of_element_located((By.ID,“firstname”)))                                        |
 
 ---
 
