@@ -1,5 +1,6 @@
 import unittest
 from selenium import webdriver
+from selenium.webdriver.support.ui import Select
 
 class RegisterNewUser(unittest.TestCase):
 
